@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KSS Portal | Flood Resilience Research</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lexend:wght@300;600;800&display=swap');
+
+        :root {
+            --kss-primary: #002147; /* Deep Academic Blue */
+            --kss-accent: #facc15;  /* Sustenance Yellow */
+            --slate-bg: #f8fafc;
+        }
+
+        body { font-family: 'DM Sans', sans-serif; background: #ffffff; color: #1e293b; }
+        h1, h2, h3, h4 { font-family: 'Lexend', sans-serif; }
+
+        /* --- LOGO ANIMATION --- */
+        .logo-box {
+            transition: all 0.3s ease;
+        }
+        .logo-box:hover { transform: translateY(-2px); }
+
+        /* --- ABOUT SECTION GLASS --- */
+        .about-image-stack {
+            position: relative;
+            padding-bottom: 40px;
+        }
+        .floating-accent {
+            position: absolute;
+            bottom: 0;
+            right: -20px;
+            background: var(--kss-primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        /* --- METHODOLOGY CARDS --- */
+        .method-card {
+            border-left: 4px solid #e2e8f0;
+            transition: all 0.4s ease;
+        }
+        .method-card:hover {
+            border-left-color: var(--kss-accent);
+            background: #f1f5f9;
+            transform: translateX(10px);
+        }
+
+        /* --- DATA PORTAL BUTTON --- */
+        .portal-btn {
+            background: linear-gradient(135deg, var(--kss-primary) 0%, #003366 100%);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .portal-btn:hover {
+            letter-spacing: 1px;
+            box-shadow: 0 15px 30px rgba(0, 33, 102, 0.3);
+        }
+
+        /* --- CUSTOM SCROLLBAR --- */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--kss-primary); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 py-3 px-8 md:px-16 flex justify-between items-center">
+        <div class="logo-box flex items-center gap-4">
+            <div class="bg-[#002147] text-white px-3 py-1 rounded font-black text-2xl italic">KSS</div>
+            <div class="hidden md:block">
+                <h1 class="text-xs font-black uppercase tracking-tighter text-[#002147]">Kotak School of Sustainability</h1>
+                <p class="text-[10px] text-slate-400 font-bold uppercase">IIT Kanpur Research</p>
+            </div>
+        </div>
+        
+        <div class="hidden lg:flex items-center gap-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+            <a href="#home" class="hover:text-[#002147]">Home</a>
+            <a href="#about" class="hover:text-[#002147]">About</a>
+            <a href="#study-areas" class="hover:text-[#002147]">Study Areas</a>
+            <a href="#methodology" class="hover:text-[#002147]">Methodology</a>
+            <a href="#portal" class="bg-[#002147] text-white px-5 py-2 rounded-full hover:bg-yellow-400 hover:text-blue-950 transition-all">GIS Data</a>
+            <a href="#contact" class="hover:text-[#002147]">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen relative flex items-center justify-center bg-slate-900">
+        <div class="absolute inset-0 opacity-50">
+            <img src="https://www.creativefabrica.com/wp-content/uploads/2022/08/14/Ghaghara-River-Mountain-Sky-Painting-Graphics-36202818-1.jpg" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 text-center text-white px-6">
+            <h1 class="text-5xl md:text-4xl font-black mb-8 leading-tight" data-aos="zoom-in">Towards Flood Resilient Cities: <br>A Pilot Study in the Lower Ghaghra-Rapti River Basin</h1>
+            <div class="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
+            <p class="text-xl max-w-2xl mx-auto opacity-80 font-light">Developing an integrated hydro-geomorphic framework that translates advanced satellite observations and machine learning into actionable, climate-resilient development strategies.</p>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto px-8 md:px-16">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="about-image-stack" data-aos="fade-right">
+                    <img src="about.PNG" class="rounded-2xl shadow-2xl w-11/12">
+                </div>
+                
+                <div data-aos="fade-left">
+                    
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-[#002147] mb-8">Engineering a Climate-Resilient Future for the Ghaghra-Rapti Basin</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-6">
+                        This study bridges the gap between complex river science and safety by developing an integrated hydro-geomorphic framework for the cities of Ayodhya, Gorakhpur, and Turtipar. By blending 30+ years of satellite observations with high-resolution drone datasets and machine learning, we analyze the shifting memory of the river—from channel mobility and sandbar evolution to human encroachment on floodplains.
+                    </p>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-10">
+                        Under the <strong>Kotak School of Sustainability (KSS)</strong>, our multidisciplinary approach translates these scientific insights into actionable urban policies and nature-based solutions, moving beyond disaster response toward a proactive, evidence-based model of resilience for India’s most sensitive riverine environments.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="study-areas" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-8 md:px-16">
+            <h2 class="text-3xl font-black text-[#002147] mb-16 uppercase tracking-tighter italic">Regional Focus Areas</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all" data-aos="fade-up">
+                    <div class="h-64 overflow-hidden"><img src="ayodhya.PNG" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-2">Ayodhya</h4>
+                        <p class="text-sm text-slate-500">Ayodhya’s dynamic braided river system faces constant channel migration, requiring integrated strategies to protect vulnerable communities, livelihoods, and urban infrastructure.</p>
+                    </div>
+                </div>
+                <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 overflow-hidden"><img src="gorakhpur.PNG" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-2">Gorakhpur</h4>
+                        <p class="text-sm text-slate-500">Gorakhpur’s stable meandering Rapti system supports dense settlements facing seasonal flooding, requiring integrated drainage and sustainable urban resilience strategies.</p>
+                    </div>
+                </div>
+                <div class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 overflow-hidden"><img src="turtipar.PNG" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="p-8">
+                        <h4 class="font-black text-xl mb-2">Turtipar</h4>
+                        <p class="text-sm text-slate-500">Turtipar’s braided Ghaghra system faces migrating channels and erosion, requiring long-term geomorphic study to manage land loss and flood risks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="methodology" class="py-24 bg-white">
+        <div class="container mx-auto px-8 md:px-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-black text-[#002147] mb-16 text-center">Methodology</h2>
+                
+                <div class="space-y-12">
+                    <div class="method-card p-8" data-aos="fade-left">
+                        <h3 class="text-2xl font-bold text-[#002147] mb-4">1. Historical Flood Analysis</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Historical floodplain dynamics were reconstructed using multi decadal satellite archives to track shifts in surface water behavior. By analyzing metrics like absolute change, recurrence, and seasonality, the study identifies critical flood hotspots and distinguishes permanent channels from ephemeral water bodies, geospatial computing to ensure pixel level consistency across a 37 year observation period, providing a robust statistical baseline for how inundation footprints respond to long term climate variability.
+                            </p>
+                    </div>
+                    
+                    <div class="method-card p-8" data-aos="fade-left" data-aos-delay="100">
+                        <h3 class="text-2xl font-bold text-[#002147] mb-4">2. River Space Demarcation</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            River Space analysis was conducted by overlaying annual water masks from 1991 to 2025 to reconstruct active channel dynamics. By tracking migration pathways, braid belt expansion, and erosion zones, the study quantifies spatial variability in river mobility. This analysis is essential for identifying geomorphic instability and active floodways where shifting river positions directly threaten agricultural lands and critical flood defenses.
+                        </p>
+                    </div>
+                    
+                    
+                    <div class="method-card p-8" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-[#002147] mb-4">3. LULC Analysis</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Land use and land cover dynamics were evaluated using high-resolution satellite imagery to assess anthropogenic pressure on natural floodplains. By mapping transitions between water, vegetation, and built-up areas, the study quantifies the conversion of natural flood retention zones into impermeable surfaces or intensive agricultural plots.
+                        </p>
+                    </div>
+
+                    <div class="method-card p-8" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-[#002147] mb-4">4. Flood Hazard Prediction</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            To predict flood hazards, a machine learning model was trained using decades of historical water data. The model identifies the primary drivers of inundation. This produces high resolution susceptibility maps that serve as diagnostic tools, pinpointing exactly where topographical depressions and weather patterns converge to create high risk hotspots.
+                        </p>
+                    </div>
+
+                    <div class="method-card p-8" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-[#002147] mb-4">5. Web GIS Integration and Visualization Platform</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            A specialized Web GIS platform was engineered to synthesize complex research outputs into an interactive, open source interface. By optimizing high resolution rasters, the system transforms static data into a dynamic diagnostic tool. This centralized hub allows stakeholders to visualize the intersections of flood susceptibility, land use, and river migration.
+                        </p>
+                    </div>
+
+                    <div class="method-card p-8" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="text-2xl font-bold text-[#002147] mb-4">6. Development of regulatory policies and cost-benefit analysis</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Translating scientific data into actionable policies, focusing on cost-benefit analysis and sustainable tech.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portal" class="py-32 bg-[#002147] text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="container mx-auto px-8 text-center relative z-10">
+            <h2 class="text-5xl font-black mb-8">Access GIS Data</h2>
+            <p class="max-w-xl mx-auto text-slate-300 text-lg mb-12">Our Open Web GIS Data Portal provides high resolution hazard maps and historical river datasets.</p>
+            
+            <a href="#" class="portal-btn inline-block px-12 py-5 rounded-full text-white font-black text-xl uppercase tracking-widest border border-white/20">
+                Launch GIS Data <i class="fas fa-external-link-alt ml-3"></i>
+            </a>
+            
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-50 text-xs font-bold uppercase tracking-[0.3em]">
+                <p>Hydrological Analysis</p>
+                <p>Land Use</p>
+                <p>Hazard Zonation</p>
+                <p>Environmental Assessment</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-50 pt-24 pb-12 border-t border-slate-200">
+        <div class="container mx-auto px-8 md:px-16 grid lg:grid-cols-3 gap-20 mb-16">
+            <div>
+                <div class="bg-[#002147] text-white inline-block px-4 py-1 rounded font-black text-3xl mb-6">KSS</div>
+                <p class="text-slate-500 leading-relaxed">Kotak School of Sustainability, dedicated to climate resilience and sustainable urban growth.</p>
+            </div>
+            <div>
+                <h5 class="font-black text-[#002147] mb-8 uppercase tracking-widest text-sm">Resources</h5>
+                <ul class="space-y-4 text-slate-500 font-bold text-sm">
+                    <li><a href="#study-areas" class="hover:text-yellow-500">Study Areas</a></li>
+                    <li><a href="#methodology" class="hover:text-yellow-500">Methodology</a></li>
+                    <li><a href="#portal" class="hover:text-yellow-500">GIS Maps</a></li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-black text-[#002147] mb-8 uppercase tracking-widest text-sm">Let's Connect</h5>
+                <p class="text-slate-500 mb-4 font-medium">Department of Earth Sciences<br>IIT Kanpur, Uttar Pradesh 208016</p>
+                <a href="mailto:es@iitk.ac.in" class="text-[#002147] font-black text-xl hover:text-yellow-500 transition-colors">es@iitk.ac.in</a>
+            </div>
+        </div>
+        <div class="text-center text-[10px] font-black text-slate-300 uppercase tracking-[0.5em] border-t border-slate-200 pt-12">
+            &copy; 2026 Kotak School of Sustainability | IIT Kanpur
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        
+        // Smooth scroll adjustment for fixed nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
