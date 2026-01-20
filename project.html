@@ -44,6 +44,44 @@
 
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-thumb { background: var(--kss-primary); border-radius: 10px; }
+
+        html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Responsive hero heading */
+.hero-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    line-height: 1.25;
+}
+
+/* Responsive hero paragraph */
+.hero-text {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Disable hover shift on mobile */
+@media (hover: none) {
+    .method-card:hover {
+        transform: none;
+        background: inherit;
+    }
+}
+
+/* Improve image responsiveness */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reduce section padding on mobile */
+@media (max-width: 640px) {
+    section {
+        padding-top: 4rem !important;
+        padding-bottom: 4rem !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -78,17 +116,26 @@
     <a href="#portal" class="bg-yellow-400 text-blue-950 px-8 py-3 rounded-full mobile-link">GIS Data</a>
 </div>
 
-    <section id="home" class="h-screen relative flex items-center justify-center bg-slate-900">
-        <div class="absolute inset-0 opacity-50">
-            <img src="https://www.creativefabrica.com/wp-content/uploads/2022/08/14/Ghaghara-River-Mountain-Sky-Painting-Graphics-36202818-1.jpg" class="w-full h-full object-cover">
-        </div>
-        <div class="relative z-10 text-center text-white px-6">
-            <h1 class="text-5xl md:text-4xl font-black mb-8 leading-tight" data-aos="zoom-in">Towards Flood Resilient Cities: <br>A Pilot Study in the Lower Ghaghra-Rapti River Basin</h1>
-            <div class="w-24 h-1 bg-yellow-400 mx-auto mb-8"></div>
-            <p class="text-xl max-w-2xl mx-auto opacity-80 font-light">Developing an integrated hydro-geomorphic framework that translates advanced satellite observations and machine learning into actionable, climate-resilient development strategies.</p>
-        </div>
-    </section>
+    <section id="home" class="min-h-screen relative flex items-center justify-center bg-slate-900 px-4">
+    <div class="absolute inset-0 opacity-50">
+        <img src="https://www.creativefabrica.com/wp-content/uploads/2022/08/14/Ghaghara-River-Mountain-Sky-Painting-Graphics-36202818-1.jpg"
+             class="w-full h-full object-cover" alt="River Basin">
+    </div>
 
+    <div class="relative z-10 text-center text-white max-w-4xl mx-auto">
+        <h1 class="hero-title font-black mb-6" data-aos="zoom-in">
+            Towards Flood Resilient Cities :<br>
+            A Pilot Study in the Lower Ghaghra-Rapti River Basin
+        </h1>
+
+        <div class="w-16 h-1 bg-yellow-400 mx-auto mb-6"></div>
+
+        <p class="hero-text opacity-90 font-light">
+            Developing an integrated hydro-geomorphic framework using satellite data and machine learning
+            to guide climate-resilient urban planning.
+        </p>
+    </div>
+</section>
     <section id="about" class="py-24 bg-white overflow-hidden">
         <div class="container mx-auto px-8 md:px-16">
             <div class="grid lg:grid-cols-2 gap-20 items-center">
@@ -198,7 +245,7 @@
             <h2 class="text-5xl font-black mb-8">Access GIS Data</h2>
             <p class="max-w-xl mx-auto text-slate-300 text-lg mb-12">Our Open Web GIS Data Portal provides high resolution hazard maps and historical river datasets.</p>
             
-            <a href="#" class="portal-btn inline-block px-12 py-5 rounded-full text-white font-black text-xl uppercase tracking-widest border border-white/20">
+            <a href="#contact" class="portal-btn inline-block px-12 py-5 rounded-full text-white font-black text-xl uppercase tracking-widest border border-white/20">
                 Launch GIS Data <i class="fas fa-external-link-alt ml-3"></i>
             </a>
             
