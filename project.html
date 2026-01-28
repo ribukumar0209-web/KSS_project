@@ -193,18 +193,82 @@ img {
     <section id="about" class="py-24 bg-white overflow-hidden">
         <div class="container mx-auto px-8 md:px-16">
             <div class="grid lg:grid-cols-2 gap-20 items-center">
-                <div class="about-image-stack" data-aos="fade-right">
-                    <img src="about.PNG" class="rounded-2xl shadow-2xl w-11/12">
-                </div>
+                <div class="about-image-stack relative group" data-aos="fade-right">
+
+    <!-- Offset background layer -->
+    <div class="absolute inset-0 bg-blue-500/10 rounded-2xl translate-x-4 translate-y-4 -z-10"></div>
+
+    <!-- Image container -->
+    <div class="relative rounded-2xl shadow-2xl overflow-hidden border border-slate-700 bg-slate-800 w-11/12">
+        <img src="about.PNG"
+             alt="Topographical Map"
+             class="w-full h-full object-cover opacity-90">
+
+        <!-- Gorakhpur -->
+        <a href="#" target="_blank"
+           class="absolute cursor-pointer"
+           style="top: 77.9%; left: 72.1%;">
+            
+            <!-- Label ABOVE -->
+            <span class="absolute -top-7 left-1/2 -translate-x-1/2 
+                         text-black-300 text-sm font-semibold tracking-wide 
+                         drop-shadow-lg whitespace-nowrap">
+                Gorakhpur
+            </span>
+
+            <!-- Pulse + Pin -->
+            <div class="absolute -inset-3 rounded-full bg-blue-500/70 animate-ping"></div>
+            <div class="relative w-4 h-4 bg-blue-500 border-2 border-white rounded-full shadow-lg"></div>
+        </a>
+
+        <!-- Ayodhya -->
+        <a href="#" target="_blank"
+           class="absolute cursor-pointer"
+           style="top: 76.1%; left: 51.6%;">
+            
+            <!-- Label ABOVE -->
+            <span class="absolute -top-7 left-1/2 -translate-x-1/2 
+                         text-black-300 text-sm font-semibold tracking-wide 
+                         drop-shadow-lg whitespace-nowrap">
+                Ayodhya
+            </span>
+
+            <!-- Pulse + Pin -->
+            <div class="absolute -inset-3 rounded-full bg-red-500/70 animate-ping"></div>
+            <div class="relative w-4 h-4 bg-red-500 border-2 border-white rounded-full shadow-lg"></div>
+        </a>
+
+        <!-- Turtipar -->
+        <a href="#" target="_blank"
+           class="absolute cursor-pointer"
+           style="top: 89.5%; left: 83.5%;">
+            
+            <!-- Label ABOVE -->
+            <span class="absolute -top-7 left-1/2 -translate-x-1/2 
+                         text-black-300 text-sm font-semibold tracking-wide 
+                         drop-shadow-lg whitespace-nowrap">
+                Turtipar
+            </span>
+
+            <!-- Pulse + Pin -->
+            <div class="absolute -inset-3 rounded-full bg-emerald-500/70 animate-ping"></div>
+            <div class="relative w-4 h-4 bg-emerald-500 border-2 border-white rounded-full shadow-lg"></div>
+        </a>
+
+    </div>
+</div>
+
+
+
                 
                 <div data-aos="fade-left">
                     
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-[#002147] mb-8">Engineering a Climate-Resilient Future for the Ghaghra-Rapti Basin</h2>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-[#002147] mb-8">Engineering a Climate Resilient Future for the Ghaghra-Rapti Basin</h2>
                     <p class="text-slate-600 text-lg leading-relaxed mb-6">
-                        This study bridges the gap between complex river science and safety by developing an integrated hydro-geomorphic framework for the cities of Ayodhya, Gorakhpur, and Turtipar. By blending 30+ years of satellite observations with high-resolution drone datasets and machine learning, we analyze the shifting memory of the river—from channel mobility and sandbar evolution to human encroachment on floodplains.
+                        This study bridges the gap between complex river science and safety by developing an integrated hydro geomorphic framework for the cities of Ayodhya, Gorakhpur, and Turtipar. By blending 30+ years of satellite observations with high resolution drone datasets and machine learning, we analyze the shifting memory of the river from channel mobility and sandbar evolution to human encroachment on floodplains.
                     </p>
                     <p class="text-slate-600 text-lg leading-relaxed mb-10">
-                        Under the <strong>Kotak School of Sustainability (KSS)</strong>, our multidisciplinary approach translates these scientific insights into actionable urban policies and nature-based solutions, moving beyond disaster response toward a proactive, evidence-based model of resilience for India’s most sensitive riverine environments.
+                        Under the <strong>Kotak School of Sustainability (KSS)</strong>, our multidisciplinary approach translates these scientific insights into actionable urban policies and nature based solutions, moving beyond disaster response toward a proactive, evidence based model of resilience for India’s most sensitive riverine environments.
                     </p>
                 </div>
             </div>
