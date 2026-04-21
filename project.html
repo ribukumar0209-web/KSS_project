@@ -139,31 +139,34 @@ img {
 </head>
 <body>
 
-    <nav class="fixed w-full z-[100] bg-white/95 backdrop-blur-md border-b border-slate-100 py-4 px-6 md:px-14 flex justify-between items-center">
-    <div class="logo-box flex items-center gap-3">
-        <img src="IIT_Kanpur_Logo.png"
-             alt="IIT Kanpur Logo" class="h-12  object-contain drop-shadow-sm">
-    <div class="w-[1px] h-12 bg-black"></div>
+    <nav class="fixed w-full z-[100] bg-white/95 backdrop-blur-md border-b border-slate-100 py-3 px-4 sm:px-6 md:px-14 flex flex-col sm:flex-row justify-between items-center">
+  <!-- Logo + Text -->
+  <div class="logo-box flex items-center gap-2 sm:gap-3">
+    <img src="IIT_Kanpur_Logo.png"
+         alt="IIT Kanpur Logo" 
+         class="h-10 sm:h-12 object-contain drop-shadow-sm">
+
+    <div class="hidden sm:block w-[1px] h-10 sm:h-12 bg-black"></div>
         
     <div class="block text-center leading-tight">
-       <!-- First Line -->
-        <h2 class="text-sm md:text-lg font-semibold tracking-tight">
+      <!-- First Line -->
+      <h2 class="text-xs sm:text-sm md:text-lg font-semibold tracking-tight">
         <span class="text-red-600">KOTAK</span>
         <span style="color:#007A33;"> SCHOOL OF SUSTAINABILITY</span>
-    </h2>
+      </h2>
 
-  <!-- Second Line -->
-      <h2 class="text-sm md:text-base font-semibold text-black tracking-wide">
-       Indian Institute of Technology Kanpur
+      <!-- Second Line -->
+      <h2 class="text-xs sm:text-sm md:text-base font-semibold text-black tracking-wide">
+        Indian Institute of Technology Kanpur
       </h2>
     </div>
-    </div>
+  </div>
     
     <div class="hidden lg:flex items-center gap-8 font-bold text-[13px] uppercase tracking-widest text-slate-500">
         <a href="#home" class="hover:text-[#002147] transition-colors">Home</a>
         <a href="#about" class="hover:text-[#002147] transition-colors">About</a>
         <a href="#study-areas" class="hover:text-[#002147] transition-colors">Urban Centres</a>
-        <a href="#methodology" class="hover:text-[#002147] transition-colors">Our Approach</a>
+        <a href="#framework" class="hover:text-[#002147] transition-colors">Our Approach</a>
         <a href="#portal" class="bg-[#002147] text-white px-5 py-2 rounded-full hover:bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:text-blue-950 transition-all">GIS Data</a>
     </div>
 
@@ -178,12 +181,12 @@ img {
     <a href="#home" class="mobile-link">Home</a>
     <a href="#about" class="mobile-link">About</a>
     <a href="#study-areas" class="mobile-link">Urban Centres</a>
-    <a href="#methodology" class="mobile-link">Our Approach</a>
+    <a href="#framework" class="mobile-link">Our Approach</a>
     <a href="#portal" class="bg-yellow-400 text-blue-950 px-8 py-3 rounded-full mobile-link">GIS Data</a>
 </div>
 
 
-<section id="home" class="min-h-screen relative flex flex-col items-center justify-center bg-slate-600 px-4 overflow-hidden">
+<section id="home" class="min-h-screen relative flex flex-col items-center justify-center bg-slate-600 px-4 overflow-hidden pt-24 sm:pt-28 md:pt-32">
   <!-- Background Image -->
   <div class="absolute inset-0 overflow-hidden">
     <img src="bg_image.jpg" 
@@ -192,68 +195,50 @@ img {
     <div class="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/40"></div>
   </div>
 
-  <style>
-    @keyframes zoomInOut {
-      0%   { transform: scale(1); }
-      50%  { transform: scale(1.1); } /* zoom in */
-      100% { transform: scale(1); }   /* zoom out */
-    }
-    .animate-zoom {
-      animation: zoomInOut 20s ease-in-out infinite;
-      transition: transform 0.8s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeIn {
-      animation: fadeIn 1.5s ease forwards;
-    }
-  </style>
-
   <!-- Content -->
   <div class="relative z-10 text-center max-w-4xl mx-auto animate-fadeIn">
-    <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-tight md:leading-snug bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent drop-shadow-lg max-w-3xl mx-auto">
+    <h1 class="hero-title text-2xl sm:text-3xl md:text-5xl font-black mb-6 leading-tight sm:leading-snug bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent drop-shadow-lg max-w-3xl mx-auto">
       Towards Flood Resilient Cities:<br>
       A Pilot Study in the Lower Ghaghra-Rapti River Basin
     </h1>
 
     <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto mb-6 animate-pulse rounded-full"></div>
 
-    <p class="hero-text text-white font-medium text-base sm:text-lg md:text-xl max-w-2xl mx-auto drop-shadow-lg">
+    <p class="hero-text text-white font-medium text-sm sm:text-base md:text-lg max-w-2xl mx-auto drop-shadow-lg">
       An integrated hydro geomorphic framework using satellite data and machine learning
       to guide flood resilient urban planning.
     </p>
 
     <!-- CTA Buttons -->
-    <div class="mt-10 flex flex-wrap justify-center gap-8">
-      <a href="#portal" class="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-bold shadow-lg hover:shadow-2xl hover:scale-110 transition-transform duration-300">
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
+      <a href="#portal" class="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-bold shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
         Explore GIS Data
       </a>
     </div>
   </div>
 
-  <!-- Stats Bar (Responsive, Positioned Below Content) -->
-  <div class="relative z-10 mt-12 flex flex-col md:flex-row justify-center items-center gap-20 md:gap-12 bg-slate-800/70 backdrop-blur-md px-6 md:px-10 py-6 rounded-2xl text-white shadow-lg max-w-4xl mx-auto">
+  <!-- Stats Bar -->
+  <div class="relative z-10 mt-12 flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12 bg-slate-800/70 backdrop-blur-md px-6 sm:px-10 py-6 rounded-2xl text-white shadow-lg max-w-4xl mx-auto">
     <div class="text-center">
-      <span class="text-3xl font-extrabold text-yellow-400">30+</span>
-      <p class="text-sm">Years of data</p>
-    </div> 
-    <div class="text-center">
-      <span class="text-3xl font-extrabold text-cyan-400">Satellite</span>
-      <p class="text-sm">Archives analyzed</p>
+      <span class="text-2xl sm:text-3xl font-extrabold text-yellow-400">30+</span>
+      <p class="text-xs sm:text-sm">Years of data</p>
     </div>
     <div class="text-center">
-      <span class="text-3xl font-extrabold text-indigo-400">Urban</span>
-      <p class="text-sm">Resilience centres</p>
+      <span class="text-2xl sm:text-3xl font-extrabold text-cyan-400">Satellite</span>
+      <p class="text-xs sm:text-sm">Archives analyzed</p>
+    </div>
+    <div class="text-center">
+      <span class="text-2xl sm:text-3xl font-extrabold text-indigo-400">Urban</span>
+      <p class="text-xs sm:text-sm">Resilience centres</p>
     </div>
   </div>
 
   <!-- Scroll Indicator -->
-  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce text-yellow-400 text-3xl">
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce text-yellow-400 text-2xl sm:text-3xl">
     ↓
   </div>
 </section>
+
 
 
 
@@ -579,17 +564,17 @@ img {
             <div>
                 <h5 class="font-black text-[#002147] mb-8 uppercase tracking-widest text-sm">Resources</h5>
                 <ul class="space-y-4 text-slate-500 font-bold text-sm">
-                    <li><a href="#study-areas" class="hover:text-yellow-500">Major Urban Centres</a></li>
-                    <li><a href="#framework" class="hover:text-yellow-500">Our Approach</a></li>
-                    <li><a href="#portal" class="hover:text-yellow-500">GIS Data</a></li>
+                    <li><a href="#study-areas" class="hover:text-[#002147]">Major Urban Centres</a></li>
+                    <li><a href="#framework" class="hover:text-[#002147]">Our Approach</a></li>
+                    <li><a href="#portal" class="hover:text-[#002147]">GIS Data</a></li>
                     
                 </ul>
             </div>
             <div>
-              <h5 class="font-black text-[#002147] mb-8 uppercase tracking-widest text-sm">Let's Connect</h5>
+              <h5 class="font-black text-[#002147] mb-8 uppercase tracking-widest text-sm">Contact</h5>
               <h5 class="text-[#002147] font-black text-xl transition-colors">Rajiv Sinha</h5>
               <p class="text-slate-500 mb-4 font-medium">Professor, Department of Earth Sciences<br>IIT Kanpur, Uttar Pradesh 208016</p>
-              <a href="mailto:rsinha@iitk.ac.in" class="text-[#002147] font-black text-1xl hover:text-yellow-500 transition-colors"><i class="fas fa-envelope mr-2"></i> rsinha@iitk.ac.in</a>
+              <a href="mailto:rsinha@iitk.ac.in" class="text-[#002147] font-black text-1xl hover:text-[#126589] transition-colors"><i class="fas fa-envelope mr-2"></i> rsinha@iitk.ac.in</a>
             </div>
           </div>
     </footer>
