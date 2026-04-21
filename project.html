@@ -575,13 +575,12 @@ img {
     </a>
     
     <!-- Grid -->
-    <div class="mt-12 sm:mt-16 md:mt-20 flex flex-row flex-wrap justify-center gap-2 sm:gap-6 md:gap-8 opacity-70 text-[9px] sm:text-xs md:text-sm font-bold uppercase px-2 sm:px-0 tracking-[0.05em] sm:tracking-[0.25em] md:tracking-[0.3em]">
-  <p class="whitespace-nowrap">Flood Analysis</p>
-  <p class="whitespace-nowrap">River Space</p>
-  <p class="whitespace-nowrap">Land Use Land Cover Dynamics</p>
-  <p class="whitespace-nowrap">Hazard Zonation</p>
-  <p class="whitespace-nowrap">Environmental Policies</p>
-</div>
+    <div class="mt-8 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-2 sm:gap-6 md:gap-8 opacity-70 text-[9px] sm:text-xs md:text-sm font-bold uppercase px-3 sm:px-0 tracking-[0.05em] sm:tracking-[0.25em] md:tracking-[0.3em]">
+  <p class="text-center">Flood Analysis</p>
+  <p class="text-center">River Space</p>
+  <p class="text-center">Land Use Land Cover Dynamics</p>
+  <p class="text-center">Hazard Zonation</p>
+  <p class="text-center">Environmental Policies</p>
 
 
 </section>
@@ -596,26 +595,32 @@ img {
       
       <!-- Logo + Description -->
       <div class="flex-1 min-w-[160px]">
-        <div class="logo-box flex items-center gap-2 mb-3">
-          <img src="IIT_Kanpur_Logo.png" alt="IIT Kanpur Logo" class="h-7 sm:h-10 object-contain drop-shadow-sm">
-          <div class="w-[1px] h-7 sm:h-10 bg-black"></div>
-          <div class="block text-left leading-tight">
-            <!-- First Line -->
-            <h5 class="text-[10px] sm:text-sm md:text-lg font-semibold tracking-tight whitespace-nowrap">
-              <span class="text-red-600">KOTAK</span>
-              <span style="color:#007A33;"> SCHOOL OF SUSTAINABILITY</span>
-            </h5>
-            <!-- Second Line -->
-            <h5 class="text-[10px] sm:text-sm md:text-base font-semibold text-black tracking-wide whitespace-nowrap">
-              Indian Institute of Technology Kanpur
-            </h5>
-          </div>
-        </div>
-        <p class="text-slate-500 text-[10px] sm:text-sm md:text-base leading-relaxed">
-          Advanced global sustainability through pioneering research,<br>
-          <span class="text-[9px] sm:text-sm md:text-base">transformative education, and innovative solutions.</span>
-        </p>
-      </div>
+  <div class="logo-box flex items-center gap-1 sm:gap-2 mb-2 sm:mb-3">
+    <img src="IIT_Kanpur_Logo.png" alt="IIT Kanpur Logo" class="h-6 sm:h-8 md:h-10 object-contain drop-shadow-sm">
+    
+    <!-- Divider line: hidden on mobile, visible on sm+ -->
+    <div class="hidden sm:block w-[1px] h-8 sm:h-10 bg-black"></div>
+    
+    <div class="block text-left leading-tight">
+      <!-- First Line -->
+      <h5 class="text-[9px] sm:text-sm md:text-lg font-semibold tracking-tight whitespace-nowrap">
+        <span class="text-red-600">KOTAK</span>
+        <span style="color:#007A33;"> SCHOOL OF SUSTAINABILITY</span>
+      </h5>
+      <!-- Second Line -->
+      <h5 class="text-[8px] sm:text-sm md:text-base font-semibold text-black tracking-wide whitespace-nowrap">
+        Indian Institute of Technology Kanpur
+      </h5>
+    </div>
+  </div>
+
+  <!-- Paragraph: smaller after second line -->
+  <p class="text-slate-500 text-[9px] sm:text-sm md:text-base leading-relaxed">
+    Advanced global sustainability through pioneering research,
+    <span class="text-[8px] sm:text-sm md:text-base">transformative education, and innovative solutions.</span>
+  </p>
+</div>
+
 
       <!-- Resources (hidden on mobile, visible on desktop) -->
       <div class="hidden lg:block">
