@@ -575,51 +575,52 @@ img {
     </a>
     
     <!-- Grid -->
-    <div class="mt-12 sm:mt-16 md:mt-20 grid grid-cols-5 gap-4 sm:gap-6 md:gap-8 opacity-70 text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-[0.1em] sm:tracking-[0.25em] md:tracking-[0.3em]">
-  <p>Flood Analysis</p>
-  <p>River Space</p>
-  <p>Land Use Land Cover Dynamics</p>
-  <p>Hazard Zonation</p>
-  <p>Environmental Policies</p>
+    <div class="mt-12 sm:mt-16 md:mt-20 flex flex-row flex-wrap justify-center gap-2 sm:gap-6 md:gap-8 opacity-70 text-[9px] sm:text-xs md:text-sm font-bold uppercase px-2 sm:px-0 tracking-[0.05em] sm:tracking-[0.25em] md:tracking-[0.3em]">
+  <p class="whitespace-nowrap">Flood Analysis</p>
+  <p class="whitespace-nowrap">River Space</p>
+  <p class="whitespace-nowrap">Land Use Land Cover Dynamics</p>
+  <p class="whitespace-nowrap">Hazard Zonation</p>
+  <p class="whitespace-nowrap">Environmental Policies</p>
 </div>
+
 
 </section>
 
 
-<footer id="contact" class="bg-slate-50 pt-24 pb-12 border-t border-slate-200">
-  <div class="container mx-auto px-4 md:px-16 mb-16">
+<footer id="contact" class="bg-slate-50 pt-16 sm:pt-24 pb-8 sm:pb-12 border-t border-slate-200">
+  <div class="container mx-auto px-3 sm:px-8 md:px-16 mb-12 sm:mb-16">
     
     <!-- Mobile: Flex row with 2 sections -->
     <!-- Desktop: Grid with 3 columns -->
-    <div class="flex flex-row justify-between gap-6 md:gap-12 lg:grid lg:grid-cols-3 lg:gap-20">
+    <div class="flex flex-row justify-between gap-4 sm:gap-8 lg:grid lg:grid-cols-3 lg:gap-20">
       
       <!-- Logo + Description -->
-      <div class="flex-1 min-w-[180px]">
-        <div class="logo-box flex items-center gap-3 mb-4">
-          <img src="IIT_Kanpur_Logo.png" alt="IIT Kanpur Logo" class="h-8 sm:h-10 object-contain drop-shadow-sm">
-          <div class="w-[1px] h-8 sm:h-10 bg-black"></div>
+      <div class="flex-1 min-w-[160px]">
+        <div class="logo-box flex items-center gap-2 mb-3">
+          <img src="IIT_Kanpur_Logo.png" alt="IIT Kanpur Logo" class="h-7 sm:h-10 object-contain drop-shadow-sm">
+          <div class="w-[1px] h-7 sm:h-10 bg-black"></div>
           <div class="block text-left leading-tight">
             <!-- First Line -->
-            <h5 class="text-[11px] sm:text-sm md:text-lg font-semibold tracking-tight whitespace-nowrap">
+            <h5 class="text-[10px] sm:text-sm md:text-lg font-semibold tracking-tight whitespace-nowrap">
               <span class="text-red-600">KOTAK</span>
               <span style="color:#007A33;"> SCHOOL OF SUSTAINABILITY</span>
             </h5>
             <!-- Second Line -->
-            <h5 class="text-[11px] sm:text-sm md:text-base font-semibold text-black tracking-wide whitespace-nowrap">
+            <h5 class="text-[10px] sm:text-sm md:text-base font-semibold text-black tracking-wide whitespace-nowrap">
               Indian Institute of Technology Kanpur
             </h5>
           </div>
         </div>
-        <p class="text-slate-500 text-xs sm:text-sm md:text-base leading-relaxed">
-          Advanced global sustainability through pioneering research, transformative education, and innovative solutions.
+        <p class="text-slate-500 text-[10px] sm:text-sm md:text-base leading-relaxed">
+          Advanced global sustainability through pioneering research,<br>
+          <span class="text-[9px] sm:text-sm md:text-base">transformative education, and innovative solutions.</span>
         </p>
       </div>
 
-
       <!-- Resources (hidden on mobile, visible on desktop) -->
       <div class="hidden lg:block">
-        <h5 class="font-black text-[#002147] mb-8 uppercase tracking-widest text-sm">Resources</h5>
-        <ul class="space-y-4 text-slate-500 font-bold text-sm">
+        <h5 class="font-black text-[#002147] mb-6 uppercase tracking-widest text-sm">Resources</h5>
+        <ul class="space-y-3 text-slate-500 font-bold text-sm">
           <li><a href="#study-areas" class="hover:text-[#002147]">Major Urban Centres</a></li>
           <li><a href="#framework" class="hover:text-[#002147]">Our Approach</a></li>
           <li><a href="#portal" class="hover:text-[#002147]">GIS Data</a></li>
@@ -627,25 +628,22 @@ img {
       </div>
 
       <!-- Contact -->
-      <div class="flex-1 min-w-[180px]">
-        <h5 class="font-black text-[#002147] mb-4 uppercase tracking-widest text-xs sm:text-sm">Contact</h5>
-        <h5 class="text-[#002147] font-black text-base sm:text-xl">Rajiv Sinha</h5>
-  
-        <!-- Paragraph with responsive font sizes -->
-        <p class="text-slate-500 mb-3 font-medium text-[11px] sm:text-sm md:text-base leading-relaxed">
+      <div class="flex-1 min-w-[160px]">
+        <h5 class="font-black text-[#002147] mb-3 uppercase tracking-widest text-[10px] sm:text-sm">Contact</h5>
+        <h5 class="text-[#002147] font-black text-[11px] sm:text-xl">Rajiv Sinha</h5>
+        <p class="text-slate-500 mb-2 font-medium text-[9px] sm:text-sm md:text-base leading-relaxed">
           Professor, Department of Earth Sciences<br>
           IIT Kanpur, Uttar Pradesh 208016
         </p>
-  
-        <a href="mailto:rsinha@iitk.ac.in" class="text-[#002147] font-black text-xs sm:text-base hover:text-[#126589] transition-colors">
+        <a href="mailto:rsinha@iitk.ac.in" class="text-[#002147] font-black text-[10px] sm:text-base hover:text-[#126589] transition-colors">
           <i class="fas fa-envelope mr-2"></i> rsinha@iitk.ac.in
         </a>
       </div>
 
-
     </div>
   </div>
 </footer>
+
 
 
 
