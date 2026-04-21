@@ -135,6 +135,10 @@ img {
     }
 }
 
+#mobile-menu.active {
+  transform: translateX(0);
+}
+
     </style>
 </head>
 <body>
@@ -186,7 +190,7 @@ img {
   <a href="#about" class="mobile-link">About</a>
   <a href="#study-areas" class="mobile-link">Urban Centres</a>
   <a href="#framework" class="mobile-link">Our Approach</a>
-  <a href="#portal" class="bg-yellow-400 text-blue-950 px-6 sm:px-8 py-2 sm:py-3 rounded-full mobile-link">GIS Data</a>
+  <a href="#portal" class="bg-white text-[#002147] px-4 md:px-5 py-2 rounded-full hover:bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 hover:text-blue-950 transition-all">GIS Data</a>
 </div>
 
 
@@ -198,6 +202,25 @@ img {
          alt="River Basin">
     <div class="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/40"></div>
   </div>
+
+  <style>
+    @keyframes zoomInOut {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.1); } /* zoom in */
+      100% { transform: scale(1); }   /* zoom out */
+    }
+    .animate-zoom {
+      animation: zoomInOut 20s ease-in-out infinite;
+      transition: transform 0.8s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 1.5s ease forwards;
+    }
+  </style>
 
   <!-- Content -->
   <div class="relative z-10 text-center max-w-4xl mx-auto animate-fadeIn">
@@ -593,9 +616,18 @@ img {
         const menuClose = document.getElementById('menu-close');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        menuToggle.addEventListener('click', () => mobileMenu.classList.add('active'));
-        menuClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
-        mobileLinks.forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.remove('translate-x-full');
+        });
+
+        menuClose.addEventListener('click', () => {
+          mobileMenu.classList.add('translate-x-full');
+        });
+
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+        });
+
 
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
