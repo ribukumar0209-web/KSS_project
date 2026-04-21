@@ -194,7 +194,7 @@ img {
   <!-- Background Image -->
   <div class="absolute inset-0 overflow-hidden">
     <img src="bg_image.jpg" 
-         class="w-full h-full object-cover animate-zoom" 
+         class="w-full h-full object-cover object-center sm:object-top animate-zoom" 
          alt="River Basin">
     <div class="absolute inset-0 bg-gradient-to-b from-slate-900/30 to-slate-900/40"></div>
   </div>
@@ -214,34 +214,35 @@ img {
     </p>
 
     <!-- CTA Buttons -->
-    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-6">
-      <a href="#portal" class="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-bold shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300">
+    <div class="mt-10 flex justify-center">
+      <a href="#portal" class="px-5 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-white font-bold shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-300 w-auto">
         Explore GIS Data
       </a>
     </div>
   </div>
 
   <!-- Stats Bar -->
-  <div class="relative z-10 mt-12 flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-12 bg-slate-800/70 backdrop-blur-md px-6 sm:px-10 py-6 rounded-2xl text-white shadow-lg max-w-4xl mx-auto">
-    <div class="text-center">
-      <span class="text-2xl sm:text-3xl font-extrabold text-yellow-400">30+</span>
+  <div class="relative z-10 mt-12 flex flex-row flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12 bg-slate-800/70 backdrop-blur-md px-4 sm:px-6 md:px-10 py-4 sm:py-6 rounded-2xl text-white shadow-lg max-w-full sm:max-w-4xl mx-auto">
+    <div class="text-center flex-1 min-w-[90px]">
+      <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-yellow-400">30+</span>
       <p class="text-xs sm:text-sm">Years of data</p>
     </div>
-    <div class="text-center">
-      <span class="text-2xl sm:text-3xl font-extrabold text-cyan-400">Satellite</span>
+    <div class="text-center flex-1 min-w-[90px]">
+      <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-cyan-400">Satellite</span>
       <p class="text-xs sm:text-sm">Archives analyzed</p>
     </div>
-    <div class="text-center">
-      <span class="text-2xl sm:text-3xl font-extrabold text-indigo-400">Urban</span>
+    <div class="text-center flex-1 min-w-[90px]">
+      <span class="text-xl sm:text-2xl md:text-3xl font-extrabold text-indigo-400">Urban</span>
       <p class="text-xs sm:text-sm">Resilience centres</p>
     </div>
   </div>
 
   <!-- Scroll Indicator -->
-  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce text-yellow-400 text-2xl sm:text-3xl">
+  <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 animate-bounce text-yellow-400 text-xl sm:text-2xl md:text-3xl">
     ↓
   </div>
 </section>
+
 
 
 
